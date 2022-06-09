@@ -5,7 +5,7 @@ resource "google_compute_subnetwork" "subnet-for-l7lb" {
   name          = format("subnet-%s-%s", split("-", var.regions[count.index])[0], "${count.index}")
   ip_cidr_range = var.ip-cidrs[count.index]
   region        = var.regions[count.index]
-  purpose       = "INTERNAL_HTTPS_LOAD_BALANCER"
+  purpose       = "PRIVATE"
   role          = "ACTIVE"
   network       = google_compute_network.vpc-network[0].id
 }

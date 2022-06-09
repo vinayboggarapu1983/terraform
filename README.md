@@ -8,7 +8,7 @@ The Module usage is fairly simple! Let's look at the snippet below
 
 ```json
 module "vpc" {
-  source = "../../modules/vpc"
+  source = "git::ssh://bitbucketURL/my_repo.git?ref=BranchName"
 
   project-id               = "odin-thirteen"
   is-network-created       = false
