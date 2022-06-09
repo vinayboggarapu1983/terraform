@@ -30,3 +30,9 @@ variable "target-tags" {
   type    = list(any)
   default = []
 }
+
+variable "enable-advanced-features" {
+  type        = bool
+  default     = false
+  description = "flag which when set to true will create NAT and other advanced network features"
+}
