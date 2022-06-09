@@ -19,3 +19,15 @@ module "vpc" {
   enable-advanced-features = true
 }
 ```
+
+`module "vpc" {
+  source = "../../modules/vpc"
+
+  project-id               = "odin-thirteen"
+  is-network-created       = false
+  regions                  = ["us-central1"]
+  ip-cidrs                 = ["10.0.130.0/24"]
+  source-tags              = []
+  target-tags              = []
+  enable-advanced-features = true
+}`
